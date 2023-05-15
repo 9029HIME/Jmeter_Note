@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: test_demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    ### 连接之前搭好的ShardingProxy
+    url: jdbc:mysql://192.168.120.161:3307/readwrite_splitting_db?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: 123456
+    hikari:
+      pool-name: hikari-pool-1
+      maximum-pool-size: 20
+      minimum-idle=10: 20
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

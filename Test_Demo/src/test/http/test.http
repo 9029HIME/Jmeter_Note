@@ -1,0 +1,7 @@
+GET http://localhost:8080/test/handler/login?username=kjg&password=123
+###
+GET http://localhost:8080/test/handlerA/1
+token: kjg-123
+###
+GET http://localhost:8080/test/handlerB/3
+token: kjg-123
